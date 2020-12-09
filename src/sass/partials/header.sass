@@ -5,5 +5,78 @@
     width: 100%
     height: auto
     z-index: 9999
+    a
+        color: inherit
+        text-decoration: none
+    &__logo
+        text-transform: uppercase
+        color: $secondary-text-color
+        font-weight: 900
+        font-size: 24px
+        line-height: 80px
+        display: inline-block
+        letter-spacing: 2px
     &__contacts
-        background-color: rgba(0, 0, 0, .35)
+        background-color: rgba(0, 0, 0, .31)
+        color: $main-text-color
+        font-size: 18px
+        line-height: 18.83px
+        font-weight: 500
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        align-items: center
+        justify-content: flex-end
+        box-sizing: border-box
+        padding-top: 16px
+        padding-bottom: 16px
+        &__phones-list
+            position: relative
+            span
+                margin: 0 24px
+        &__socials
+            position: relative
+            margin-left: 80px
+            .social-icon
+                display: inline-block
+                margin: 0 11px
+    &__navigation
+        position: relative
+        display: grid
+        grid-template-columns: auto 1fr auto
+        grid-column-gap: 15%
+        align-items: center
+        .navbar
+            position: relative
+            list-style-type: none
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-direction: row
+            flex-wrap: nowrap
+            color: $main-text-color
+            font-size: 18px
+            font-weight: 400
+            line-height: 80px
+            font-style: normal
+            letter-spacing: 1px
+            li
+                display: inline-block
+            a
+                position: relative
+                display: inline
+                transition: all .25s ease-in-out
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: -10px
+                    width: 0%
+                    height: 2px
+                    background-color: $secondary-text-color
+                    transition: all .25s ease-in-out
+            a:hover
+                color: $secondary-text-color
+                &::after
+                    width: 100%
+                        

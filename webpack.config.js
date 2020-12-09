@@ -18,6 +18,19 @@ module.exports = {
         loader: 'html-loader'
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+						loader: 'file-loader',
+						options: {
+							name: 'css/[name].css',
+						}
+          },
+					{ loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader' }
+        ]
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           {

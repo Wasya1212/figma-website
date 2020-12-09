@@ -8,10 +8,15 @@ module.exports = {
   entry: ['./src/app.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
     filename: 'js/index.js'
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -42,6 +47,17 @@ module.exports = {
           },
 					{ loader: 'sass-loader' }
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: [
+          {
+						loader: 'file-loader',
+						options: {
+							name: 'img/[name].[ext]',
+						}
+          }
+        ]
       }
     ]
   },

@@ -47,7 +47,8 @@
             strong
                 color: $main-text-color
                 font-weight: 600
-                font-size: 20px
+                font-size: 18px
+                // font-size: 20px
                 font-style: normal
                 line-height: 27.88px
                 letter-spacing: 0.2
@@ -126,22 +127,7 @@
             max-width: 550px
             display: block
             width: 550px
-            cursor: default
-        h3
-            text-transform: uppercase
-            font-weight: 400
-            font-size: 18px
-            letter-spacing: 9.7px
-            line-height: 25px
-            font-style: normal
-            color: $secondary-text-color
-        .slogan
-            font-family: $main-title-font
-            font-style: normal
-            font-size: 40px
-            line-height: 55.76px
-            letter-spacing: 0.2px
-            margin-bottom: 27px
+            cursor: default            
         p
             font-size: 18px
             font-style: normal
@@ -150,3 +136,76 @@
             letter-spacing: 0.20000000298023224px
             text-align: left
             color: $additional-text-color
+
+.how-we-work
+    position: relative
+    background-color: $background-color-black
+    color: $main-text-color
+    box-sizing: border-box
+    padding-top: 65px
+    padding-bottom: 126px
+    .title
+        margin-bottom: 15px
+    &__work-tasks
+        position: relative
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-column-gap: 30px
+        margin-top: 27px
+        padding: 0 20px
+        box-sizing: border-box
+        .task
+            font-style: normal
+            font-size: 14px
+            line-height: 19.52px
+            &:last-child
+                justify-self: end
+    &__work-steps
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: row
+        margin-top: 90px
+        padding: 0 40px
+        box-sizing: border-box
+        &::before
+            content: ''
+            position: absolute
+            left: 40px
+            top: 50%
+            transform: translateY(-50%)
+            height: 3px
+            width: calc(100% - 80px)
+            background-color: $background-color-light
+        &__step
+            position: relative
+            background-color: $background-color-black
+            overflow: hidden
+            border-radius: 50%
+            .number
+                position: relative
+                display: inline-block
+                width: 65px
+                height: 65px
+                display: flex
+                justify-content: center
+                font-size: 40px
+                font-family: $main-title-font
+                font-style: normal
+                line-height: 55.76px
+                vertical-align: middle
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    left: 0
+                    top: 0
+                    height: 65px
+                    width: 65px
+                    background-size: contain
+                    background-repeat: no-repeat
+                    background-position: center
+            @for $i from 1 through 6
+                .number[num="#{$i}"]::before
+                    background-image: url("../../assets/icons/step#{$i}.svg")

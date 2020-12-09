@@ -1,0 +1,58 @@
+.rotate_360, .rotate_270, .rotate_180, .rotate_90
+  position: relative
+  width: 212px
+  height: 100px
+  display: inline-block
+
+.rotate_90:after
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 60px
+  height: 60px
+  border-left: 3px solid $background-color-light
+  border-right: 3px solid $secondary-background-color
+  border-top: 3px solid $background-color-light
+  border-bottom: 3px solid $background-color-light
+  border-radius: 50px 50px 50px 50px
+  transform: rotate(-45deg)
+
+.rotate_180:after
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 60px
+  height: 60px
+  border-left: 3px solid $background-color-light
+  border-right: 3px solid $secondary-background-color
+  border-top: 3px solid $background-color-light
+  border-bottom: 3px solid $secondary-background-color
+  border-radius: 50px 50px 50px 50px
+  transform: rotate(-45deg)
+
+.rotate_270:after
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 60px
+  height: 60px
+  border-left: 3px solid $secondary-background-color
+  border-right: 3px solid $secondary-background-color
+  border-top: 3px solid $background-color-light
+  border-bottom: 3px solid $secondary-background-color
+  border-radius: 50px 50px 50px 50px
+  transform: rotate(-45deg)
+
+.rotate_360:after
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 60px
+  height: 60px
+  border: 3px solid $secondary-background-color
+  border-radius: 50px 50px 50px 50px
+  transform: rotate(-45deg)

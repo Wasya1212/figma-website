@@ -1,7 +1,7 @@
 .intro
     position: relative
     background-image: url("../../assets/img/electrician-installer-with-tool-his-hands-working-with-cable-construction-site 1.png")
-    background-size: 100% auto
+    background-size: cover
     background-position: bottom left
     background-repeat: no-repeat
     width: 100%
@@ -90,7 +90,7 @@
             position: absolute
             bottom: 0
             right: 0
-            background-color: lighten($secondary-background-color, 7%)
+            background-color: $secondary-background-color-light
             box-sizing: border-box
             padding: 32px 0
             &__experience
@@ -222,6 +222,54 @@
         text-align: center
     &__preview
         position: relative
+        padding-bottom: 94px
+        margin-left: 150px
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 94px
+            width: 100%
+            background-color: $secondary-background-color-light
+            display: block
+        #primary-slider
+            position: absolute
+            top: 0
+            left: -110px
+            .splide__slide
+                cursor: pointer
+                margin-bottom: 10px
+            .is-active
+                display: none
+        .splide__pagination
+            position: absolute
+            left: 150px
+            bottom: -60px
+            display: flex
+            width: auto
+            li
+                margin-right: 20px
+        .splide__arrows
+            position: absolute
+            right: 4rem
+            bottom: -75px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            width: 90px
+            .splide__arrow
+                position: relative
+                left: auto
+                right: auto
+                background-color: transparent
+                color: white
+                filter: invert(1)
+                svg
+                    height: 24px
+                    width: 24px
+                .splide__arrow--prev
+                    margin-right: 59px
     &__description
         position: relative
         display: flex
@@ -235,11 +283,19 @@
         background-repeat: no-repeat
         background-position: bottom right
         background-position-y: 265%
+        cursor: default
         &>*
             max-width: 550px
             display: block
             width: 550px
-            cursor: default            
+            cursor: default
+        h3
+            font-size: 24px
+            line-height: 33.46px       
+            font-style: normal
+            font-weight: 600
+            letter-spacing: 1px
+            margin-bottom: 24px
         p
             font-size: 18px
             font-style: normal
@@ -247,4 +303,12 @@
             line-height: 25px
             letter-spacing: 0.20000000298023224px
             text-align: left
-            color: $additional-text-color
+            margin-bottom: 25px
+        span
+            font-size: 18px
+            line-height: 25.09px
+            font-style: normal
+            margin: 6px 0
+        strong
+            font-weight: 700
+            margin-right: 0.5ch

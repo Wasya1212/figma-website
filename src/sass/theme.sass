@@ -22,17 +22,32 @@
     font-family: $main-text-font
     cursor: pointer
     outline: none
+    transition: all .25s ease-in-out
+    &:hover
+        box-shadow: none
+        color: $component-text-color-secondary
+        background-color: $background-color-light
 
 .button.white
     color: $text-color-black
     background-color: white
     box-shadow: none
+    border: 2px solid transparent
+    &:hover
+        box-shadow: none
+        color: white
+        background-color: transparent
+        border: 2px solid white
 
 .button.outline
     border: 2px solid $component-background-color
     color: $component-text-color-secondary
     background-color: transparent
     box-shadow: none
+    &:hover
+        box-shadow: none
+        color: $component-text-color
+        border-color: $component-text-color
 
 .title
     text-transform: uppercase

@@ -21,6 +21,9 @@
         li
             list-style-type: none
             font-weight: 200
+            transition: all .25s ease-in-out
+            &:hover
+                color: $secondary-text-color-light
         a
             color: inherit
             text-decoration: none
@@ -46,6 +49,10 @@
             display: inline-block
             letter-spacing: 2px
             margin-bottom: 24px
+            cursor: default
+            a
+                text-decoration: none
+                color: inherit
             h1
                 display: inline-block
         .slogan
@@ -59,8 +66,14 @@
         flex-direction: column
         justify-content: space-between
         align-items: center
+    &__socials__icon
         opacity: .35
+        transition: all .25s ease-in-out
+        &:hover
+            opacity: 1
     &__copyright
+        cursor: default
+        user-select: none
         color: darken($main-background-color, 70%)
         border-top: 1px solid darken($main-background-color, 70%)
         font-size: 14px

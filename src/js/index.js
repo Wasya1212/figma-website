@@ -29,9 +29,21 @@ const secondarySliderOpts = {
 	}
 };
 
+const feedbackSliderOpts = {
+  type: 'loop',
+  autoplay: true,
+  drag: false,
+  arrows: true,
+  speed: 1000,
+  rewind: true,
+  pagination: true,
+  pauseOnHover: false
+};
+
 document.addEventListener( 'DOMContentLoaded', function () {
   const primarySlider  = new Splide('.splide', primarySliderOpts);
   const secondarySlider = new Splide( '#primary-slider', secondarySliderOpts).mount();
-  
+  const feedbacksSlider  = new Splide('#feedbacks-slider', feedbackSliderOpts).mount();
+
   primarySlider.sync( secondarySlider ).mount();
 } );

@@ -20,7 +20,8 @@ const secondarySliderOpts = {
 	gap         : 10,
 	focus       : 'center',
 	pagination  : false,
-	cover       : true,
+  cover       : true,
+  arrows: false,
 	breakpoints : {
 		'600': {
 			fixedWidth  : 66,

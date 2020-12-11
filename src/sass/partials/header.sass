@@ -16,7 +16,10 @@
         line-height: 80px
         display: inline-block
         letter-spacing: 2px
+        user-select: none
     &__contacts
+        position: relative
+        z-index: 9999
         background-color: rgba(0, 0, 0, .31)
         color: $main-text-color
         font-size: 18px
@@ -79,4 +82,63 @@
                 color: $secondary-text-color
                 &::after
                     width: 100%
-                        
+
+.burger-menu
+    display: none
+
+#burger-checkbox
+    display: none
+
+#burger-checkbox~.top-header__navigation .burger-menu::after
+    content: '☰'
+    font-size: 30px
+    cursor: pointer
+
+#burger-checkbox:checked~.top-header__navigation .burger-menu::after
+    content: '✖'
+
+@media only screen and (max-width: 1250px)
+    .top-header
+        &__navigation
+            grid-column-gap: 20px
+
+@media only screen and (max-width: 960px)
+    #burger-checkbox:checked~.top-header__navigation
+        height: 100vh
+    #burger-checkbox:checked~.top-header__navigation>*
+        display: flex
+    #burger-checkbox:checked~.top-header__navigation .top-header__logo
+        display: flex
+    #burger-checkbox~.top-header__navigation>*
+        display: none
+    #burger-checkbox~.top-header__navigation .top-header__logo
+        display: flex
+    .top-header .burger-menu
+        display: inline-block
+    .top-header
+        display: flex
+        flex-direction: column-reverse
+        align-items: center
+        &__navigation
+            position: absolute
+            left: 0
+            top: 0
+            height: 0
+            width: 100%
+            background-color: $background-color-black
+            grid-template-columns: 1fr
+            grid-template-rows: auto 1fr auto
+            align-items: center
+            justify-items: center
+            .navbar
+                flex-direction: column
+        &__contacts
+            display: none
+        &__logo
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            width: 100%
+        &__actions
+            margin-bottom: 2rem

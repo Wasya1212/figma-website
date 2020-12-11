@@ -7,6 +7,7 @@
 </head>
 <body>
     <header class="top-header">
+        <input type="checkbox" id="burger-checkbox">
         <div class="top-header__contacts container">
             <div class="top-header__contacts__phones-list">
                 <span>
@@ -31,6 +32,7 @@
         <div class="top-header__navigation container">
             <div class="top-header__logo logotype">
                 <a href="#">logo</a>
+                <label class="burger-menu" for="burger-checkbox"></label>
             </div>
             <div class="top-header__navigation__navbar">
                 <nav class="navbar">
@@ -100,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-us__description">
+            <div class="about-us__description container">
                 <h3 class="title">Про нас</h3>
                 <span class="slogan subtitle">Хто ми такі?</span>
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum eros arcu, at aliquet tortor vestibulum ut. Quisque sed libero nec nulla pulvinar pharetra. Aliquam porttitor justo lorem, at rhoncus nulla condimentum vitae. Cras vitae aliquet quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus id quam nulla. Proin consequat mauris augue, id suscipit risus mattis non. Sed a vulputate diam.</p>
@@ -108,43 +110,47 @@
             </div>
         </section>
         <section class="how-we-work container-small">
-            <h3 class="title">етапи роботи</h3>
-            <span class="subtitle light">Як ми працюємо?</span>
-            <ul class="how-we-work__work-steps">
-                <li class="how-we-work__work-steps__step step">
-                    <div class="number" num="1">1</div>
-                </li>
-                <li class="how-we-work__work-steps__step step">
-                    <div class="number" num="2">2</div>
-                </li>
-                <li class="how-we-work__work-steps__step step">
-                    <div class="number" num="3">3</div>
-                </li>
-                <li class="how-we-work__work-steps__step step">
-                    <div class="number" num="4">4</div>
-                </li>
-                <li class="how-we-work__work-steps__step step">
-                    <div class="number" num="5">5</div>
-                </li>
-                <li class="how-we-work__work-steps__step step">
-                    <div class="number" num="6">6</div>
-                </li>
-            </ul>
-            <ul class="how-we-work__work-tasks">
-                <li class="task">Виїзд майстра на обєкт для замірів</li>
-                <li class="task">Складання кошторису згідно попередніх домовлень</li>
-                <li class="task">Підписання договору</li>
-                <li class="task">Закупівля матеріалу</li>
-                <li class="task">Вчасна здача проекту</li>
-                <li class="task">Щасливі замовники</li>
-            </ul>
+            <header>
+                <h3 class="title">етапи роботи</h3>
+                <span class="subtitle light">Як ми працюємо?</span>
+            </header>
+            <div class="how-we-work__plan">
+                <ul class="how-we-work__work-steps">
+                    <li class="how-we-work__work-steps__step step">
+                        <div class="number" num="1">1</div>
+                    </li>
+                    <li class="how-we-work__work-steps__step step">
+                        <div class="number" num="2">2</div>
+                    </li>
+                    <li class="how-we-work__work-steps__step step">
+                        <div class="number" num="3">3</div>
+                    </li>
+                    <li class="how-we-work__work-steps__step step">
+                        <div class="number" num="4">4</div>
+                    </li>
+                    <li class="how-we-work__work-steps__step step">
+                        <div class="number" num="5">5</div>
+                    </li>
+                    <li class="how-we-work__work-steps__step step">
+                        <div class="number" num="6">6</div>
+                    </li>
+                </ul>
+                <ul class="how-we-work__work-tasks">
+                    <li class="task">Виїзд майстра на обєкт для замірів</li>
+                    <li class="task">Складання кошторису згідно попередніх домовлень</li>
+                    <li class="task">Підписання договору</li>
+                    <li class="task">Закупівля матеріалу</li>
+                    <li class="task">Вчасна здача проекту</li>
+                    <li class="task">Щасливі замовники</li>
+                </ul>
+            </div>
         </section>
         <section class="portfolio">
             <header>
                 <h3 class="title">портфоліо</h3>
                 <span class="subtitle">Наші роботи</span>
             </header>
-            <div class="portfolio__description">
+            <div class="portfolio__description container">
                 <h3>Назва проекта</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum eros arcu, at aliquet tortor vestibulum ut. Quisque sed libero nec nulla pulvinar pharetra. Aliquam porttitor justo lorem, at rhoncus nulla condimentum vitae. Cras vitae aliquet quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus id quam nulla.</p>
                 <span><strong>Термін ремонта:</strong> 21 день</span>
